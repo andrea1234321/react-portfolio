@@ -131,7 +131,7 @@ export default function ProjectList() {
         </div>
       ))}
 
-      <div className="flex overflow-x-auto sm:justify-center">
+      <div className={`flex overflow-x-auto sm:justify-center ${styles.paginationContainer}`}>
         <Pagination
           currentPage={currentPage}
           itemsPerPage={itemsPerPage}
