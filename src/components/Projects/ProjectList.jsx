@@ -13,7 +13,7 @@ export default function ProjectList() {
     {
       name: "Midnight Inventory Management",
       description:
-        "Independently built an inventory management app to deepen expertise in Java and Spring Boot. The app enables efficient tracking and editing of inventory across multiple warehouses through a user-friendly interface and robust backend, simulating real-world operational needs.",
+        "An inventory management app that enables efficient tracking and editing of inventory across multiple warehouses, simulating real-world operational needs.",
       frontEnd: ["JavaScript", "HTML", "CSS"],
       backEnd: ["Java", "Spring", "PostgreSQL"],
       githubLink:
@@ -22,7 +22,7 @@ export default function ProjectList() {
     {
       name: "Express Tax",
       description:
-        "Developed a full-stack tax filing application to streamline the management of personal tax information. Included functionality to create, view, update, and delete tax records, with accessibility settings that allow users to switch between English and Spanish, enhancing usability for a diverse audience.",
+        "A full-stack tax filing application that streamlines the management of personal tax information. Includes full CRUD functionality, as well as accessibility settings that allow users to switch between English and Spanish.",
       frontEnd: ["TypeScript", "HTML", "CSS"],
       backEnd: ["Java", "Spring", "PostgreSQL"],
       githubLink: "https://github.com/andrea1234321/tax-prep-app-frontend",
@@ -30,7 +30,7 @@ export default function ProjectList() {
     {
       name: "HealthPal",
       description:
-        'Built a collaborative React application for the "Women Who Code Hackathon for Social Good," leveraging the OpenAI API to deliver personalized medical recommendations based on user demographics, medical history, and current concerns. his project won the Best Web Development category.',
+        'A react application built for a hackathon that leverages the OpenAI API to deliver personalized medical recommendations based on user inputs. This project won the Best Web Development category.',
       frontEnd: ["JavaScript", "HTML", "CSS"],
       backEnd: ["React", "MongoDb", "Express", "Node", "OpenAI"],
       githubLink: "https://github.com/andrea1234321/healthPal-front-end",
@@ -39,7 +39,7 @@ export default function ProjectList() {
     {
       name: "BAMM Voyage",
       description:
-        "Collaborated with three engineers to build a MERN stack travel planning application designed to simplify trip organization by helping users plan, manage, and track their travel itineraries in one place. The app offers an intuitive interface and a reliable backend to streamline all aspects of travel preparation.",
+        "A MERN stack travel planning application designed to simplify trip organization by helping users plan, manage, and track their travel itineraries in one place.",
       frontEnd: ["JavaScript", "HTML", "CSS"],
       backEnd: ["React", "MongoDb", "Express", "Node"],
       githubLink: "https://github.com/CurrentlyBob/bamm-voyage-front-end",
@@ -47,21 +47,21 @@ export default function ProjectList() {
     },
     {
       name: "LevelUp",
-      description: `Independently developed and designed a MEN stack application to help users organize their lives by creating detailed goals and tracking progress. The app also supports identifying and breaking bad habits, offering a comprehensive tool for personal growth and productivity.`,
+      description: `A MEN stack app to help users organize their lives by creating detailed goals and tracking progress. The app also supports identifying and breaking bad habits, offering a comprehensive tool for personal growth and productivity.`,
       frontEnd: ["JavaScript", "HTML", "CSS"],
       backEnd: ["MongoDb", "Express", "Node"],
       githubLink: "https://github.com/andrea1234321/healthPal-front-end",
     },
     {
       name: "BlackJack",
-      description: `Developed a vintage Vegas-themed Blackjack as an initial project to establish foundational JavaScript proficiency. The game incorporates essential Blackjack mechanics including doubling down and accurate ace value logic, delivering an engaging and authentic casino experience.`,
+      description: `A vintage Vegas-themed Blackjack game that incorporates essential game mechanics including doubling down and accurate ace value logic, delivering an engaging and authentic casino experience.`,
       frontEnd: ["JavaScript", "HTML", "CSS"],
       githubLink: "https://github.com/andrea1234321/BlackJack",
       webLink: "https://andrea-blackjack.netlify.app/",
     },
     {
       name: "Showcase",
-      description: `Developed an application to manage a users favorite shows as a dedicated effort to build proficiency in Python and Django. The project features full CRUD functionalities and demonstrates practical experience in building web applications with these technologies.`,
+      description: `An application to manage a users favorite shows as a dedicated effort to build proficiency in Python and Django. The project features full CRUD functionalities and demonstrates practical experience in building web applications with these technologies.`,
       frontEnd: ["Python", "HTML", "CSS"],
       backEnd: ["PostgreSQL", "Django"],
       githubLink: "https://github.com/andrea1234321/showcase",
@@ -82,7 +82,7 @@ export default function ProjectList() {
     PostgreSQL: "https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white",
     Spring: "https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white",
     Java: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
-    OpenAi: "https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white",
+    OpenAI: "https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white",
   };
 
   // Calculate the projects to display for the current page
