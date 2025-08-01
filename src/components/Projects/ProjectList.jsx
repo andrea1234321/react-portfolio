@@ -1,8 +1,14 @@
-import React from "react";
-import { Button } from "flowbite-react";
+import React, { useState } from "react";
+import { Button, Pagination } from "flowbite-react";
 import styles from "./ProjectList.module.css";
 
 export default function ProjectList() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   const projects = [
     {
       name: "Midnight Inventory Management",
@@ -36,7 +42,7 @@ export default function ProjectList() {
         "Collaborated with three engineers to build a MERN stack travel planning application designed to simplify trip organization by helping users plan, manage, and track their travel itineraries in one place. The app offers an intuitive interface and a reliable backend to streamline all aspects of travel preparation.",
       frontEnd: ["JavaScript", "HTML", "CSS"],
       backEnd: ["React", "MongoDb", "Express", "Node"],
-      sgithubLink: "https://github.com/CurrentlyBob/bamm-voyage-front-end",
+      githubLink: "https://github.com/CurrentlyBob/bamm-voyage-front-end",
       webLink: "https://bamm-voyage.netlify.app/",
     },
     {
@@ -76,23 +82,38 @@ export default function ProjectList() {
     PostgreSQL: "https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white",
     Spring: "https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white",
     Java: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
-    OpenAi: 'https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white'
+    OpenAi: "https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white",
   };
+
+  // Calculate the projects to display for the current page
+  const itemsPerPage = 2;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProjects = projects.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
 
   return (
     <>
-      {projects.map((project) => (
+      {paginatedProjects.map((project) => (
         <div className={styles.projectCard} key={project.name}>
           <div className={styles.picture}>picture</div>
           <div className={styles.description}>
             <h1>{project.name}</h1>
             <div className={styles.badges}>
               {project.frontEnd.map((tech, index) => (
-                <img src={techBadges[tech]} alt={`${tech} badge`} key={`frontend-${index}`}></img>
+                <img
+                  src={techBadges[tech]}
+                  alt={`${tech} badge`}
+                  key={`frontend-${index}`}
+                ></img>
               ))}
               {project.backEnd &&
                 project.backEnd.map((tech, index) => (
-                  <img src={techBadges[tech]} alt={`${tech} badge`} key={`frontend-${index}`}></img>
+                  <img
+                    src={techBadges[tech]}
+                    alt={`${tech} badge`}
+                    key={`backend-${index}`}
+                  ></img>
                 ))}
             </div>
             <h2>{project.description}</h2>
@@ -109,6 +130,17 @@ export default function ProjectList() {
           </div>
         </div>
       ))}
+
+      <div className="flex overflow-x-auto sm:justify-center">
+        <Pagination
+          currentPage={currentPage}
+          itemsPerPage={itemsPerPage}
+          totalItems={projects.length}
+          totalPages={totalPages}
+          onPageChange={onPageChange}
+          showIcons
+        />
+      </div>
     </>
   );
 }
