@@ -3,14 +3,18 @@
   flex-direction: row;
   max-width: 80%;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .picture {
   width: 50%;
-  padding: 16px;
-  border: 1px solid black;
-  border-radius: 50%;
+  height: 250px;
+  object-fit: fill;
+  border-radius: 20px;
+  margin: 16px;
+  border-radius: 20px;
 }
+
 .description {
   width: 50%;
   padding: 16px;
@@ -30,9 +34,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
 }
 
-.paginationContainer li{
-    list-style-type: none;
-  }
+.badges img {
+  border-radius: 16px;
+}
+
+.paginationContainer li {
+  list-style-type: none;
+}

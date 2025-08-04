@@ -20,7 +20,7 @@ export default function Work() {
       icon: HiBriefcase,
       description: [
         "Developed and maintained front-end features for a high-traffic government web application using React, JavaScript, and TypeScript",
-        "Led efforts in migrating the codebase from JavaScript to TypeScript, becoming a key resource for best practices and supporting teammates during the transition.",
+        "Led efforts in migrating the codebase from JavaScript to TypeScript, becoming a key resource for best practices and supporting teammates during the transition",
       ],
     },
     {
