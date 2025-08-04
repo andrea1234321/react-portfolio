@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Button, Pagination } from "flowbite-react";
+import { Pagination } from "flowbite-react";
+import { ArrowUpRightFromSquare } from "flowbite-react-icons/outline";
+import { Github } from "flowbite-react-icons/solid";
 import styles from "./ProjectList.module.css";
 import expresstax from "../../assets/expresstax.png";
 import midnight from "../../assets/midnight.png";
@@ -127,6 +129,17 @@ export default function ProjectList() {
           />
           <div className={styles.description}>
             <h1>{project.name}</h1>
+
+            {project.webLink && (
+              <a href={project.webLink} target="_blank">
+                <ArrowUpRightFromSquare />
+              </a>
+            )}
+            {
+              <a href={project.githubLink} target="_blank">
+                <Github />
+              </a>
+            }
             <div className={styles.badges}>
               {project.frontEnd.map((tech, index) => (
                 <img
@@ -145,16 +158,6 @@ export default function ProjectList() {
                 ))}
             </div>
             <h2>{project.description}</h2>
-            <div className={styles.links}>
-              <Button href={project.githubLink} target="_blank">
-                GitHub
-              </Button>
-              {project.webLink && (
-                <Button href={project.webLink} target="_blank">
-                  Website
-                </Button>
-              )}
-            </div>
           </div>
         </div>
       ))}

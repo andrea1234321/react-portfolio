@@ -24,7 +24,15 @@
   font-size: 2em;
   line-height: normal;
   margin: 0;
+  display: inline;
 }
+
+.description > a > svg {
+  display: inline;
+  margin-left: 12px;
+  vertical-align: top;
+}
+
 .links {
   display: flex;
   flex-direction: row;
